@@ -34,16 +34,25 @@ And returned on the previous night.'''
 # print(poem, file=fout, sep='', end='')
 # fout.close()
 
-fout = open('relativity', 'wt')
-size = len(poem)
-print(size)
-offset = 0
-chunk = 100
-while True:
-    print(offset)
-    if offset > size:
-        break
-    fout.write(poem[offset:offset+chunk])
-    offset += chunk
+# fout = open('relativity', 'wt')
+# size = len(poem)
+# print(size)
+# offset = 0
+# chunk = 100
+# while True:
+#     print(offset)
+#     if offset > size:
+#         break
+#     fout.write(poem[offset:offset+chunk])
+#     offset += chunk
 
-fout.close()
+# fout.close()
+
+# fout = open('relativity', 'xt')
+
+try：
+    fout = open('relativity', 'xt')
+    fout.write('stomp stomp stomp')
+except FileExistsError:
+    print('relativity lready exists!. Than was a close one.')
+    
