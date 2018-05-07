@@ -9,7 +9,13 @@ poem = '''There was a young lady named Bright,
 # fout.write(poem)
 # fout.close()
 
-fout = open('relativity', 'wt')
+test_tx = '''testです。'''
+
+fout = open('test_tx.txt', 'wt')
+print(test_tx, file=fout)
+fout.close()
+
+fout = open('relativity2', 'wt')
 print(poem)
 print(poem, file=fout)
 fout.close()
